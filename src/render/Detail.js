@@ -24,7 +24,11 @@ function Detail(){
             <h2>like count:{movie.like_count}</h2>
             <img src={movie.medium_cover_image} alt={movie.title}/>
             <h3>{movie.description_full}</h3>
-            
+            <ul>
+                {movie.genres.map((g) => (
+                    <li key={g}>{g}</li>
+                    ))}
+        </ul>
       </div>
       </div>
       )}
